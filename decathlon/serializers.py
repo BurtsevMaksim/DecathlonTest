@@ -29,6 +29,5 @@ class AthleteSerializer(serializers.ModelSerializer):
                 index += 1
         dict_of_elems = {key: value for key, value in dict_of_elems.items() if value[0] > 1}
         if len(dict_of_elems.items()) > 0:
-            print(dict_of_elems.items())
             return f"{dict_of_elems.get(obj.points_overall)[1][0]}-{dict_of_elems.get(obj.points_overall)[1][1]}"
         return ath_points_index+1
